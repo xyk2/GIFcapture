@@ -18,11 +18,13 @@ import os
 import shutil
 import sys
 import time
-from PIL import Image
-import ImageGrab
+from lib.PIL import Image
+from lib.PIL import ImageGrab
 import etc.settings as s
 from lib.images2gif import writeGif
 import msvcrt
+
+
 
 img = []
 file_location = []
@@ -55,7 +57,7 @@ PILimages = [Image.open(x) for x in file_location]
 writeGif(s.GIF_FILE, PILimages, duration = (sum(fps)/len(fps))) #real time framerate
 #for filename in file_location: os.remove(filename)
 #os.rmdir('temp')
-shutil.rmtree('%stemp'%program_path)
+shutil.rmtree(r'%stemp'%program_path)
 
 print "\n\n\nGIF file information:"
 print "  Size:             %d KB" %(os.path.getsize(s.GIF_FILE)/1024)
