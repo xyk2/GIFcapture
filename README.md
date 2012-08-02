@@ -3,7 +3,7 @@ GIFcapture
 
 GIFcapture is a program that captures your screen into an animated .gif file. 
 
-  - Requires the [Python Imaging Library].
+  - Requires python 2.7 (NOT compatible with 3).
   - Windows only. Linux support will be added later.
 
 
